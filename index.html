@@ -829,18 +829,6 @@ select.form-control {
       background: #000;
     }
 
-/* Mod Edit Teks (Live Edit Highlighter) */
-    .editable-mode-active [contenteditable="true"] {
-      outline: 2px dashed #d4a34b;
-      background: rgba(254, 243, 199, 0.3);
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-
-.editable-mode-active [contenteditable="true"]:hover {
-      background: rgba(254, 243, 199, 0.6);
-    }
-
 /* Animasi */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-6px); }
@@ -1089,11 +1077,7 @@ select.form-control {
             <i class="fa-solid fa-music"></i>
             <span id="musicBtnLabel">Mainkan Muzik</span>
           </button>
-          <button class="btn-pill" id="editToggleBtn" aria-label="Aktifkan suntingan teks secara langsung">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span id="editBtnLabel">Ubah Teks (Edit)</span>
-          </button>
-        </div>
+                  </div>
 
 <!-- Ikon Mahkota / Lambang Bangunan -->
         <div class="crest-icon">
@@ -1390,7 +1374,9 @@ select.form-control {
         <i class="fa-solid fa-seedling"></i>
       </div>
       <p id="footerCopy">© 2026 Majlis Makan Malam Amal SJAM Kota Bharu. Hak Cipta Terpelihara.</p>
-      <p style="font-size: 0.76rem; color: #94a3b8;">Kad jemputan digital interaktif dengan muzik latar & suntingan langsung.</p>
+      <p style="font-size: 0.76rem; color: #94a3b8;">
+  Kad jemputan digital interaktif dengan muzik latar dan pengesahan kehadiran.
+</p>
     </footer>
 
 </main>
@@ -1468,8 +1454,7 @@ const firebaseReady = Promise.all([
     const successBanner = document.getElementById('successBanner');
     const musicToggleBtn = document.getElementById('musicToggleBtn');
     const musicBtnLabel = document.getElementById('musicBtnLabel');
-    const editToggleBtn = document.getElementById('editToggleBtn');
-    const editBtnLabel = document.getElementById('editBtnLabel');
+    
 
     /* Elemen Modal */
     const customModal = document.getElementById('customModal');
@@ -1577,48 +1562,7 @@ const firebaseReady = Promise.all([
 
     musicToggleBtn.addEventListener('click', toggleBackgroundMusic);
 
-    /* =========================================
-       2. MOD UBAH TEKS SECARA LANGSUNG (LIVE EDIT)
-       ========================================= */
-    let isEditMode = false;
-    const editableElements = [
-      document.getElementById('textBadge'),
-      document.getElementById('textTitleSub'),
-      document.getElementById('textTitleOrg'),
-      document.getElementById('textTitleYear'),
-      document.getElementById('textIntro'),
-      document.getElementById('textDate'),
-      document.getElementById('textTime'),
-      document.getElementById('textVenue')
-    ];
-
-    editToggleBtn.addEventListener('click', () => {
-      isEditMode = !isEditMode;
-      document.body.classList.toggle('editable-mode-active', isEditMode);
-
-      editableElements.forEach(el => {
-        if (el) el.contentEditable = isEditMode ? "true" : "false";
-      });
-
-      if (isEditMode) {
-        editToggleBtn.classList.add('edit-active');
-        editBtnLabel.textContent = "Selesai Edit";
-        showAppModal(
-          "Mod Suntingan Diaktifkan",
-          "Anda kini boleh menekan dan menaip pada teks kad (Tajuk, Tarikh, Masa, Lokasi) untuk mengubah suai mengikut keperluan majlis anda.",
-          "info"
-        );
-      } else {
-        editToggleBtn.classList.remove('edit-active');
-        editBtnLabel.textContent = "Ubah Teks (Edit)";
-        showAppModal(
-          "Suntingan Disimpan",
-          "Kandungan kad jemputan telah dikemas kini dengan teks pilihan anda.",
-          "success"
-        );
-      }
-    });
-
+    
     /* =========================================
        3. KELOLAAN BORANG RSVP & JADUAL
        ========================================= */    

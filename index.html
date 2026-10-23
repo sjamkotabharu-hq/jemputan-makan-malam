@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kad Jemputan Rasmi - Majlis Makan Malam Amal SJAM Kota Bharu 2026</title>
+
+<!-- Font Google: Playfair Display untuk sentuhan mewah & Inter untuk teks bersih -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome untuk ikon tepat -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    /* =========================================
+       REKABENTUK ASAS & TEMA EMAS MEWAH
+       ========================================= */
+    :root {
+      --gold-primary: #d4a34b;
+      --gold-light: #fbe5a7;
+      --gold-dark: #aa7a2c;
+      --gold-gradient: linear-gradient(135deg, #f7d88b 0%, #d4a34b 50%, #b88628 100%);
+      --gold-button: linear-gradient(180deg, #fce096 0%, #e2ab46 100%);
+      --navy-dark: #0f1c2e;
+      --navy-deep: #16253b;
+      --text-main: #1f2937;
+      --text-muted: #576574;
+      --bg-cream: #faf8f5;
+      --border-gold: rgba(212, 163, 75, 0.4);
+      --card-shadow: 0 12px 35px rgba(22, 37, 59, 0.08);
+      --transition: all 0.3s ease;
+    }
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+/* Container Utama */
+    .invitation-wrapper {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+      position: relative;
+    }
+
+/* =========================================
+       BAHAGIAN HERO (KAD ATAS)
+       ========================================= */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.92) 100%),
+                  url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 40px 24px 60px 24px;
+      text-align: center;
+      border-bottom: 2px solid rgba(212, 163, 75, 0.2);
+      overflow: hidden;
+    }
+
+/* Lengkungan hiasan emas di latar belakang */
+    .gold-arch-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: 
+        radial-gradient(ellipse at 15% 10%, rgba(247, 216, 139, 0.28) 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 30%, rgba(212, 163, 75, 0.22) 0%, transparent 60%);
+      z-index: 0;
+    }
+
+.hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+/* Bar Tindakan Atas (Muzik & Edit) */
+    .top-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+.btn-pill {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(212, 163, 75, 0.6);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
+    }
+
+.btn-pill:hover {
+      background: #fdfaf2;
+      border-color: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+.btn-pill.edit-active {
+      background: var(--gold-button);
+      color: #3b2800;
+    }
+
+/* Lambang / Ikon Bangunan */
+    .crest-icon {
+      font-size: 2.2rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      display: inline-block;
+      opacity: 0.85;
+    }
+
+/* Lencana Jemputan Rasmi */
+    .badge-jemputan {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--gold-primary);
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #3d2b07;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+.badge-jemputan::before, .badge-jemputan::after {
+      content: "✦";
+      color: var(--gold-primary);
+      font-size: 0.75rem;
+    }
+
+/* Tajuk Majlis */
+    .main-title-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+
+.main-title-org {
+      font-family: 'Cinzel', serif;
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #b07c22;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+    }
+
+.main-title-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c2518;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+.invitation-intro {
+      font-size: 1.05rem;
+      color: #4b5563;
+      max-width: 620px;
+      margin: 0 auto 24px auto;
+      line-height: 1.7;
+    }
+
+/* Motif Hiasan Pemisah */
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 25px auto;
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+    }
+
+.ornament-divider::before, .ornament-divider::after {
+      content: "";
+      height: 1px;
+      width: 70px;
+      background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+    }
+
+/* Kad Maklumat Utama (Tarikh, Masa, Tempat) */
+    .event-info-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0 35px 0;
+    }
+
+.info-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(212, 163, 75, 0.35);
+      border-radius: 14px;
+      padding: 16px 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+
+.info-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(212, 163, 75, 0.15);
+      border-color: var(--gold-primary);
+    }
+
+.info-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #fbf0d3 0%, #f6deb0 100%);
+      color: #946313;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+.info-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #927546;
+      margin-bottom: 2px;
+    }
+
+.info-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1.3;
+    }
+
+/* Butang Tindakan Hero */
+    .hero-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+.btn-gold {
+      background: var(--gold-button);
+      color: #3b2800;
+      border: none;
+      padding: 14px 34px;
+      border-radius: 40px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 18px rgba(212, 163, 75, 0.35);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+.btn-gold:hover {
+      box-shadow: 0 8px 24px rgba(212, 163, 75, 0.55);
+      transform: translateY(-2px);
+    }
+
+.btn-navy {
+      background: var(--navy-deep);
+      color: #ffffff;
+      border: none;
+      padding: 14px 34px;
+      border-radius: 40px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 18px rgba(22, 37, 59, 0.25);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+.btn-navy:hover {
+      background: #0f1c2e;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(22, 37, 59, 0.4);
+    }
+
+/* =========================================
+       BAHAGIAN TENTATIF MAJLIS
+       ========================================= */
+    .tentatif-section {
+      padding: 60px 24px 70px 24px;
+      background: #ffffff;
+      text-align: center;
+      position: relative;
+    }
+
+.section-header-wrap {
+      margin-bottom: 45px;
+    }
+
+.section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+.section-title::before, .section-title::after {
+      content: "";
+      width: 45px;
+      height: 1px;
+      background: var(--gold-primary);
+    }
+
+.section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+/* Garis Masa Mendatar (Timeline) */
+    .timeline-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+.timeline-track-line {
+      position: absolute;
+      top: 36px;
+      left: 6%;
+      right: 6%;
+      height: 2px;
+      background: repeating-linear-gradient(to right, var(--gold-primary) 0, var(--gold-primary) 5px, transparent 5px, transparent 10px);
+      z-index: 1;
+    }
+
+.timeline-steps {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+.step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 6px;
+    }
+
+.step-icon-bubble {
+      width: 72px;
+      height: 72px;
+      background: #ffffff;
+      border: 2px solid var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      color: var(--navy-dark);
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(212, 163, 75, 0.2);
+      transition: var(--transition);
+    }
+
+.step-item:hover .step-icon-bubble {
+      transform: scale(1.1);
+      background: var(--gold-light);
+      border-color: var(--gold-dark);
+    }
+
+.step-time {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 4px;
+    }
+
+.step-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+.step-desc-primary {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+
+.step-desc-secondary {
+      font-size: 0.78rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+/* =========================================
+       BAHAGIAN RSVP & BORANG
+       ========================================= */
+    .rsvp-section {
+      padding: 20px 24px 60px 24px;
+      background: #faf8f5;
+    }
+
+.rsvp-card-box {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+
+.rsvp-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+.rsvp-title-group h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--navy-dark);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+.rsvp-title-group h2::after {
+      content: "";
+      width: 40px;
+      height: 1.5px;
+      background: var(--gold-primary);
+    }
+
+.rsvp-title-group p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+/* Notis Sambungan Google Sheet */
+    .sheet-notice-box {
+      background: #fdfaf2;
+      border: 1px solid rgba(212, 163, 75, 0.4);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 440px;
+    }
+
+.sheet-notice-icon {
+      font-size: 1.6rem;
+      color: #2b394e;
+      flex-shrink: 0;
+    }
+
+.sheet-notice-text {
+      font-size: 0.78rem;
+      color: #4b5563;
+      line-height: 1.35;
+    }
+
+.sheet-notice-text strong {
+      display: block;
+      color: var(--navy-dark);
+      font-size: 0.82rem;
+      margin-bottom: 2px;
+    }
+
+/* Grid Borang RSVP */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+.form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+.form-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+    }
+
+.form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      background: #ffffff;
+      outline: none;
+      transition: var(--transition);
+      color: #1f2937;
+    }
+
+.form-control:focus {
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 3px rgba(212, 163, 75, 0.2);
+    }
+
+select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 16px;
+      cursor: pointer;
+    }
+
+.btn-submit-rsvp {
+      grid-column: 1 / -1;
+      width: 100%;
+      background: var(--gold-button);
+      border: 1px solid rgba(184, 134, 40, 0.5);
+      color: #382402;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(212, 163, 75, 0.3);
+      transition: var(--transition);
+      margin-top: 8px;
+    }
+
+.btn-submit-rsvp:hover {
+      background: linear-gradient(180deg, #ffe5a3 0%, #e8b14a 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(212, 163, 75, 0.45);
+    }
+
+/* Mesej Kejayaan Respons */
+    .success-alert {
+      display: none;
+      grid-column: 1 / -1;
+      background: #e6f9ed;
+      border: 1px solid #75deb0;
+      color: #0f6848;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      animation: fadeIn 0.4s ease;
+    }
+
+.success-alert.show {
+      display: flex;
+    }
+
+/* =========================================
+       SENARAI TETAMU YANG MENGESAHKAN
+       ========================================= */
+    .attendee-list-section {
+      margin-top: 40px;
+      border-top: 1px solid rgba(212, 163, 75, 0.3);
+      padding-top: 30px;
+    }
+
+.attendee-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+.attendee-header-flex h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      color: var(--navy-dark);
+      font-weight: 700;
+    }
+
+.attendee-header-flex p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+.badge-counter {
+      background: #fdf6e6;
+      border: 1px solid rgba(212, 163, 75, 0.5);
+      border-radius: 12px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+.counter-icon {
+      font-size: 1.6rem;
+      color: #b07c22;
+    }
+
+.counter-text small {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #7c5a1a;
+      letter-spacing: 0.5px;
+    }
+
+.counter-text span {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #3b2800;
+    }
+
+/* Jadual Kehadiran */
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+
+.guest-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+.guest-table thead {
+      background: var(--navy-deep);
+      color: #ffffff;
+    }
+
+.guest-table th {
+      padding: 14px 16px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+.guest-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #f1f3f5;
+      color: #334155;
+    }
+
+.guest-table tbody tr:hover {
+      background-color: #fcfbf9;
+    }
+
+.badge-status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+.status-hadir {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+.status-pasangan {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+.status-maaf {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+.empty-row-text {
+      text-align: center;
+      color: #94a3b8;
+      padding: 24px !important;
+      font-style: italic;
+    }
+
+/* Footer Kad */
+    .invitation-footer {
+      background: #ffffff;
+      padding: 30px 20px 40px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(212, 163, 75, 0.2);
+    }
+
+.invitation-footer p {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin-top: 8px;
+    }
+
+/* Modal Pemberitahuan Gantian alert() */
+    .custom-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+.custom-modal-overlay.active {
+      display: flex;
+    }
+
+.custom-modal-card {
+      background: #ffffff;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+      animation: modalPop 0.3s ease;
+    }
+
+.modal-icon-wrap {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+
+.icon-success {
+      background: #e6f9ed;
+      color: #10b981;
+    }
+
+.icon-info {
+      background: #eff6ff;
+      color: #3b82f6;
+    }
+
+.icon-warn {
+      background: #fffbeb;
+      color: #f59e0b;
+    }
+
+.modal-btn-close {
+      margin-top: 20px;
+      padding: 10px 26px;
+      background: var(--navy-deep);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+.modal-btn-close:hover {
+      background: #000;
+    }
+
+/* Mod Edit Teks (Live Edit Highlighter) */
+    .editable-mode-active [contenteditable="true"] {
+      outline: 2px dashed #d4a34b;
+      background: rgba(254, 243, 199, 0.3);
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+.editable-mode-active [contenteditable="true"]:hover {
+      background: rgba(254, 243, 199, 0.6);
+    }
+
+/* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+@keyframes modalPop {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+/* =========================================
+       MEDIA QUERIES (RESPONSIF PENUH)
+       ========================================= */
+    @media (max-width: 860px) {
+      .timeline-track-line {
+        display: none;
+      }
+      .timeline-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: left;
+      }
+
+.step-item {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto);
+  column-gap: 16px;
+  align-items: start;
+  text-align: left;
+  background: #fafaf9;
+  padding: 16px;
+  border-radius: 14px;
+  border-left: 4px solid var(--gold-primary);
+}
+
+.step-icon-bubble {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  width: 54px;
+  height: 54px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.step-time,
+.step-name,
+.step-desc-primary,
+.step-desc-secondary {
+  grid-column: 2;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.step-time {
+  grid-row: 1;
+}
+
+.step-name {
+  grid-row: 2;
+}
+
+.step-desc-primary {
+  grid-row: 3;
+}
+
+.step-desc-secondary {
+  grid-row: 4;
+}
+      .event-info-cards {
+        grid-template-columns: 1fr;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .main-title-sub {
+        font-size: 1.8rem;
+      }
+      .main-title-org {
+        font-size: 2rem;
+      }
+      .main-title-year {
+        font-size: 2.1rem;
+      }
+    }
+
+@media (max-width: 520px) {
+      .hero-section {
+        padding: 24px 16px 45px 16px;
+      }
+      .top-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .hero-btn-group {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-gold, .btn-navy {
+        width: 100%;
+        justify-content: center;
+      }
+      .rsvp-card-box {
+        padding: 22px 16px;
+      }
+      .attendee-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .badge-counter {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+/* =========================================
+   PENAMBAHBAIKAN RESPONSIF
+   TELEFON, TABLET DAN PC
+   ========================================= */
+
+/* TABLET MELINTANG / LAPTOP KECIL */
+@media (min-width: 861px) and (max-width: 1024px) {
+
+.timeline-track-line {
+    display: none;
+  }
+
+.timeline-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+.step-item {
+    background: #fafaf9;
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+    padding: 16px;
+  }
+
+.form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* TELEFON DAN TABLET MENEGAK */
+@media (max-width: 860px) {
+
+.section-title {
+    font-size: clamp(1.5rem, 5vw, 2.3rem);
+    gap: 10px;
+  }
+
+.section-title::before,
+  .section-title::after {
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+.rsvp-title-group h2 {
+    font-size: clamp(1.45rem, 5vw, 2rem);
+  }
+
+.form-control {
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+.btn-pill {
+    min-height: 44px;
+  }
+
+.btn-submit-rsvp {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+.guest-table {
+    min-width: 640px;
+  }
+
+.custom-modal-card {
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    overflow-y: auto;
+  }
+}
+
+/* TELEFON KECIL */
+@media (max-width: 520px) {
+
+.main-title-org {
+    font-size: clamp(1.45rem, 6.5vw, 2rem);
+    letter-spacing: 1px;
+  }
+
+.section-title {
+    font-size: 1.55rem;
+  }
+
+.section-title::before,
+  .section-title::after {
+    width: 16px;
+  }
+
+.rsvp-title-group h2 {
+    display: block;
+    font-size: 1.55rem;
+    line-height: 1.3;
+  }
+
+.rsvp-title-group h2::after {
+    display: none;
+  }
+
+.attendee-header-flex h3 {
+    font-size: 1.35rem;
+    line-height: 1.35;
+  }
+
+.info-card {
+    padding: 14px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- KANDUNGAN UTAMA KAD JEMPUTAN -->
+  <main class="invitation-wrapper">
+
+<!-- ==================== BAHAGIAN HERO ==================== -->
+    <section class="hero-section">
+      <div class="gold-arch-bg"></div>
+
+<div class="hero-content">
+        <!-- Bar Tindakan: Main Muzik & Mod Suntingan -->
+        <div class="top-actions">
+          <button class="btn-pill" id="musicToggleBtn" aria-label="Main atau jeda muzik latar">
+            <i class="fa-solid fa-music"></i>
+            <span id="musicBtnLabel">Mainkan Muzik</span>
+          </button>
+          <button class="btn-pill" id="editToggleBtn" aria-label="Aktifkan suntingan teks secara langsung">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span id="editBtnLabel">Ubah Teks (Edit)</span>
+          </button>
+        </div>
+
+<!-- Ikon Mahkota / Lambang Bangunan -->
+        <div class="crest-icon">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+
+<!-- Badge Jemputan Rasmi -->
+        <div>
+          <div class="badge-jemputan" id="textBadge">Jemputan Rasmi</div>
+        </div>
+
+<!-- Tajuk Utama -->
+        <h1 class="main-title-sub" id="textTitleSub">MAJLIS MAKAN MALAM AMAL</h1>
+
+<h2 class="main-title-org" id="textTitleOrg">
+  SJAM KAWASAN KELANTAN UTARA
+  <span style="white-space: nowrap;">KOTA BHARU</span>
+</h2>
+
+<div class="main-title-year" id="textTitleYear">2026</div>
+
+<!-- Teks Aluan -->
+        <p class="invitation-intro" id="textIntro">
+          Dengan penuh sukacitanya kami menjemput Dato’/Datin/Tuan/Puan hadir bagi memeriahkan majlis makan malam amal ini.
+        </p>
+
+<!-- Pemisah Hiasan -->
+        <div class="ornament-divider">
+          <i class="fa-regular fa-snowflake"></i>
+          <i class="fa-solid fa-ring"></i>
+          <i class="fa-regular fa-snowflake"></i>
+        </div>
+
+<!-- Kad Maklumat Utama (Tarikh, Masa, Tempat) -->
+        <div class="event-info-cards">
+          <!-- Tarikh -->
+          <div class="info-card">
+            <div class="info-icon-box">
+              <i class="fa-regular fa-calendar-days"></i>
+            </div>
+            <div>
+              <div class="info-label">Tarikh</div>
+              <div class="info-val" id="textDate">15 Disember 2026</div>
+            </div>
+          </div>
+
+<!-- Masa -->
+          <div class="info-card">
+            <div class="info-icon-box">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div>
+              <div class="info-label">Masa</div>
+              <div class="info-val" id="textTime">8:00 Malam</div>
+            </div>
+          </div>
+
+<!-- Tempat -->
+          <div class="info-card">
+            <div class="info-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <div class="info-label">Tempat</div>
+              <div class="info-val" id="textVenue">Grand Ballroom,<br>Hotel Royale</div>
+            </div>
+          </div>
+        </div>
+
+<!-- Butang Navigasi Cepat -->
+        <div class="hero-btn-group">
+          <a href="#rsvpArea" class="btn-gold">
+            <span>Sahkan Kehadiran (RSVP)</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </a>
+          <a href="#tentatifArea" class="btn-navy">
+            <span>Lihat Tentatif Majlis</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== BAHAGIAN TENTATIF MAJLIS ==================== -->
+    <section class="tentatif-section" id="tentatifArea">
+      <!-- Motif Pemisah -->
+      <div class="ornament-divider" style="margin-top: 0; margin-bottom: 25px;">
+        <i class="fa-solid fa-diamond"></i>
+        <i class="fa-solid fa-certificate"></i>
+        <i class="fa-solid fa-diamond"></i>
+      </div>
+
+<div class="section-header-wrap">
+        <h2 class="section-title">Tentatif Majlis</h2>
+        <p class="section-subtitle">Atur cara bagi sepanjang majlis makan malam berlangsung.</p>
+      </div>
+
+<!-- Garis Masa Interaktif -->
+      <div class="timeline-container">
+        <div class="timeline-track-line"></div>
+        <div class="timeline-steps">
+
+<!-- Langkah 1 -->
+          <div class="step-item">
+            <div class="step-icon-bubble">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="step-time">2000</div>
+            <div class="step-name">Ketibaan</div>
+            <div class="step-desc-primary">Ketibaan Tetamu & Dif-Dif Kehormat</div>
+            <div class="step-desc-secondary">Tetamu mengambil tempat duduk di dalam dewan utama.</div>
+          </div>
+
+<!-- Langkah 2 -->
+          <div class="step-item">
+            <div class="step-icon-bubble">
+              <i class="fa-solid fa-microphone-lines"></i>
+            </div>
+            <div class="step-time">2030</div>
+            <div class="step-name">Perasmian</div>
+            <div class="step-desc-primary">Ketibaan Tetamu Utama & Nyanyian Lagu Negaraku</div>
+            <div class="step-desc-secondary">Bacaan doa pembuka majlis.</div>
+          </div>
+
+<!-- Langkah 3 -->
+          <div class="step-item">
+            <div class="step-icon-bubble">
+              <i class="fa-solid fa-bell-concierge"></i>
+            </div>
+            <div class="step-time">2100</div>
+            <div class="step-name">Jamuan</div>
+            <div class="step-desc-primary">Jamuan Makan Malam & Persembahan Multimedia</div>
+            <div class="step-desc-secondary">Nikmati hidangan istimewa sambil dihiburkan muzik latar.</div>
+          </div>
+
+<!-- Langkah 4 -->
+          <div class="step-item">
+            <div class="step-icon-bubble">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="step-time">2215</div>
+            <div class="step-name">Cabutan Bertuah</div>
+            <div class="step-desc-primary">Cabutan Bertuah & Penyampaian Anugerah Khas</div>
+            <div class="step-desc-secondary">Sesi penyampaian hadiah dan penghargaan peserta/penyokong.</div>
+          </div>
+
+<!-- Langkah 5 -->
+          <div class="step-item">
+            <div class="step-icon-bubble">
+              <i class="fa-regular fa-flag"></i>
+            </div>
+            <div class="step-time">2300</div>
+            <div class="step-name">Bersurai</div>
+            <div class="step-desc-primary">Sesi Bergambar & Bersurai</div>
+            <div class="step-desc-secondary">Majlis bersurai dengan penuh kesyukuran.</div>
+          </div>
+
+</div>
+      </div>
+    </section>
+
+<!-- ==================== BAHAGIAN PENGESAHAN RSVP ==================== -->
+    <section class="rsvp-section" id="rsvpArea">
+      <div class="rsvp-card-box">
+
+<div class="rsvp-header-flex">
+          <div class="rsvp-title-group">
+            <h2>Pengesahan Kehadiran (RSVP)</h2>
+            <p>Sila lengkapkan butiran di bawah untuk rekod kehadiran anda.</p>
+          </div>
+
+<!-- Notis Sambungan Google Sheet -->
+          <div class="sheet-notice-box">
+            <div class="sheet-notice-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="sheet-notice-text">
+              <strong>Sambungan Google Sheet & Penyimpanan:</strong>
+              Setiap nama tetamu yang menghantar borang akan terus disimpan dalam senarai di bawah dan boleh dipautkan secara automatik ke Google Sheet anda menggunakan URL Google Apps Script.
+            </div>
+          </div>
+        </div>
+
+<!-- Borang RSVP -->
+        <form id="rsvpForm">
+          <div class="form-grid">
+
+<!-- Nama Penuh -->
+            <div class="form-group">
+              <label for="namaTetamu">Nama Penuh (Gelaran / Dato' / Datin / Tuan / Puan) *</label>
+              <input type="text" id="namaTetamu" class="form-control" placeholder="Cth: Dr. Ahmad bin Zulkifli" required>
+            </div>
+
+<!-- Emel -->
+            <div class="form-group">
+              <label for="emelTetamu">Alamat Emel</label>
+              <input type="email" id="emelTetamu" class="form-control" placeholder="nama@email.com">
+            </div>
+
+<!-- No Telefon / WhatsApp -->
+            <div class="form-group">
+              <label for="telefonTetamu">No. Telefon (WhatsApp) *</label>
+              <input type="tel" id="telefonTetamu" class="form-control" placeholder="012-3456789" required>
+            </div>
+
+<!-- Status Kehadiran -->
+<div class="form-group">
+  <label for="statusKehadiran">Status Kehadiran *</label>
+  <select id="statusKehadiran" class="form-control" required>
+    <option value="" disabled selected>-- Pilih Status Kehadiran --</option>
+    <option value="Hadir (Seorang)">Hadir (Seorang Diri)</option>
+    <option value="Tidak Dapat Hadir">Tidak Hadir</option>
+  </select>
+</div>
+
+<!-- Jabatan / Hospital / Jawatan -->
+<div class="form-group">
+  <label for="alahanMakanan">Jabatan / Hospital / Jawatan</label>
+  <input
+    type="text"
+    id="alahanMakanan"
+    class="form-control"
+    placeholder="Cth: Jabatan Kecemasan / Hospital Kota Bharu / Jururawat"
+  >
+</div>
+
+<!-- Pilihan Pautan Google Apps Script -->
+            <div class="form-group">
+              <label for="googleScriptUrl">URL Web App Google Sheet (Pilihan)</label>
+              <input type="url" id="googleScriptUrl" class="form-control" placeholder="https://script.google.com/macros/s/.../exec">
+            </div>
+
+<!-- Butang Hantar -->
+            <button type="submit" class="btn-submit-rsvp" id="btnSubmit">
+              <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Hantar Pengesahan Kehadiran
+            </button>
+
+<!-- Banner Berjaya -->
+            <div class="success-alert" id="successBanner">
+              <i class="fa-solid fa-circle-check" style="font-size: 1.3rem;"></i>
+              <span>Terima kasih! Kehadiran anda telah berjaya direkodkan dan dimasukkan ke dalam sistem.</span>
+            </div>
+
+</div>
+        </form>
+
+<!-- ==================== SENARAI TETAMU YANG MENGESAHKAN ==================== -->
+        <div class="attendee-list-section">
+          <div class="attendee-header-flex">
+            <div>
+              <h3>Senarai Tetamu Yang Mengesahkan Kehadiran</h3>
+              <p>Direkodkan secara langsung dari borang RSVP di atas.</p>
+            </div>
+
+<div class="badge-counter">
+              <div class="counter-icon">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="counter-text">
+                <small>Jumlah Hadir:</small>
+                <span id="counterHadir">0 orang</span>
+              </div>
+            </div>
+          </div>
+
+<!-- Jadual Data Tetamu -->
+          <div class="table-responsive">
+            <table class="guest-table" id="tableGuests">
+              <thead>
+                <tr>
+                  <th style="width: 32%;">Nama Tetamu</th>
+                  <th style="width: 26%;">Status</th>
+                  <th style="width: 22%;">Bilangan</th>
+                  <th style="width: 20%;">Tarikh/Masa</th>
+                </tr>
+              </thead>
+              <tbody id="guestTableBody">
+                <tr id="emptyRowPlaceholder">
+                  <td colspan="4" class="empty-row-text">Belum ada rekod kehadiran dimasukkan.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+</div>
+    </section>
+
+<!-- ==================== FOOTER KAD ==================== -->
+    <footer class="invitation-footer">
+      <div class="ornament-divider" style="margin: 0 auto 16px auto;">
+        <i class="fa-solid fa-seedling"></i>
+        <i class="fa-regular fa-gem"></i>
+        <i class="fa-solid fa-seedling"></i>
+      </div>
+      <p id="footerCopy">© 2026 Majlis Makan Malam Amal SJAM Kota Bharu. Hak Cipta Terpelihara.</p>
+      <p style="font-size: 0.76rem; color: #94a3b8;">Kad jemputan digital interaktif dengan muzik latar & suntingan langsung.</p>
+    </footer>
+
+</main>
+
+<!-- MODAL PEMBERITAHUAN (Custom Modal) -->
+  <div class="custom-modal-overlay" id="customModal">
+    <div class="custom-modal-card">
+      <div class="modal-icon-wrap" id="modalIcon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 id="modalTitle" style="font-size: 1.25rem; margin-bottom: 8px; color: var(--navy-dark);">Pemberitahuan</h3>
+      <p id="modalMsg" style="font-size: 0.9rem; color: #4b5563; line-height: 1.5;"></p>
+      <button class="modal-btn-close" id="modalCloseBtn">Tutup</button>
+    </div>
+  </div>
+
+<!-- =========================================
+       LOGIK JAVASCRIPT VANILLA
+       ========================================= -->
+  <script>
+    /* In-Memory State untuk Senarai Tetamu */
+    const guestState = [];
+
+
+/* =========================================
+   SAMBUNGAN FIREBASE SJAM KOTA BHARU
+   ========================================= */
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDzl3Gvl-tE0GKt46GVVeZur3EiLOXSQbc",
+  authDomain: "sjam-kota-bharu-makan-malam.firebaseapp.com",
+  projectId: "sjam-kota-bharu-makan-malam",
+  storageBucket: "sjam-kota-bharu-makan-malam.firebasestorage.app",
+  messagingSenderId: "1010485771891",
+  appId: "1:1010485771891:web:66654a97aae4d11ca1f406"
+};
+
+
+/* FIREBASE + APP CHECK SJAM KOTA BHARU */
+
+const firebaseReady = Promise.all([
+  import("https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js"),
+  import("https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js"),
+  import("https://www.gstatic.com/firebasejs/13.1.0/firebase-app-check.js")
+]).then(([appSDK, firestoreSDK, appCheckSDK]) => {
+
+  const app = appSDK.initializeApp(firebaseConfig);
+
+  // Aktifkan Firebase App Check
+  const appCheck = appCheckSDK.initializeAppCheck(app, {
+    provider: new appCheckSDK.ReCaptchaEnterpriseProvider(
+      "6LeNOPwtAAAAAGnoBWh8uUlvpm8TdqBO7z7ouABJ"
+    ),
+    isTokenAutoRefreshEnabled: true
+  });
+
+  // Sambungan Firestore
+  const db = firestoreSDK.getFirestore(app);
+
+  console.log("Firebase SJAM dan App Check dimulakan.");
+
+  return {
+    db: db,
+    firestore: firestoreSDK,
+    appCheck: appCheck
+  };
+});
+
+
+    /* Elemen DOM */
+    const rsvpForm = document.getElementById('rsvpForm');
+    const guestTableBody = document.getElementById('guestTableBody');
+    const emptyRowPlaceholder = document.getElementById('emptyRowPlaceholder');
+    const counterHadir = document.getElementById('counterHadir');
+    const successBanner = document.getElementById('successBanner');
+    const musicToggleBtn = document.getElementById('musicToggleBtn');
+    const musicBtnLabel = document.getElementById('musicBtnLabel');
+    const editToggleBtn = document.getElementById('editToggleBtn');
+    const editBtnLabel = document.getElementById('editBtnLabel');
+
+    /* Elemen Modal */
+    const customModal = document.getElementById('customModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMsg = document.getElementById('modalMsg');
+    const modalIcon = document.getElementById('modalIcon');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+    /* Fungsi Papar Modal (Pengganti alert) */
+    function showAppModal(title, message, type = 'info') {
+      modalTitle.textContent = title;
+      modalMsg.textContent = message;
+
+      modalIcon.className = 'modal-icon-wrap';
+      if (type === 'success') {
+        modalIcon.classList.add('icon-success');
+        modalIcon.innerHTML = '<i class="fa-solid fa-check"></i>';
+      } else if (type === 'warning') {
+        modalIcon.classList.add('icon-warn');
+        modalIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+      } else {
+        modalIcon.classList.add('icon-info');
+        modalIcon.innerHTML = '<i class="fa-solid fa-circle-info"></i>';
+      }
+
+      customModal.classList.add('active');
+    }
+
+    modalCloseBtn.addEventListener('click', () => {
+      customModal.classList.remove('active');
+    });
+
+    customModal.addEventListener('click', (e) => {
+      if (e.target === customModal) {
+        customModal.classList.remove('active');
+      }
+    });
+
+    /* =========================================
+       1. PENGURUSAN MUZIK LATAR ELEGAN (Web Audio API)
+       Mewujudkan melodi akustik / piano santai tanpa fail mp3 luar
+       ========================================= */
+    let audioCtx = null;
+    let isPlayingMusic = false;
+    let musicInterval = null;
+
+    function createHarmonicChime(freq, startTime, duration = 2.2) {
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      // Nada lembut seperti glockenspiel / piano akustik
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, startTime);
+
+      // Envelop bunyi
+      gain.gain.setValueAtTime(0, startTime);
+      gain.gain.linearRampToValueAtTime(0.08, startTime + 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start(startTime);
+      osc.stop(startTime + duration);
+    }
+
+    function playMajesticMelody() {
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      // Kunci nada lembut Pentatonik D Major yang menenangkan
+      const notes = [293.66, 329.63, 369.99, 440.00, 493.88, 587.33];
+      
+      notes.forEach((freq, idx) => {
+        createHarmonicChime(freq, now + (idx * 0.7), 2.5);
+      });
+    }
+
+    function toggleBackgroundMusic() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      if (!isPlayingMusic) {
+        isPlayingMusic = true;
+        musicBtnLabel.textContent = "Hentikan Muzik";
+        musicToggleBtn.classList.add('edit-active');
+        playMajesticMelody();
+        // Ulangi ritma melodi lembut setiap 5 saat
+        musicInterval = setInterval(() => {
+          if (isPlayingMusic) playMajesticMelody();
+        }, 5200);
+      } else {
+        isPlayingMusic = false;
+        clearInterval(musicInterval);
+        musicBtnLabel.textContent = "Mainkan Muzik";
+        musicToggleBtn.classList.remove('edit-active');
+      }
+    }
+
+    musicToggleBtn.addEventListener('click', toggleBackgroundMusic);
+
+    /* =========================================
+       2. MOD UBAH TEKS SECARA LANGSUNG (LIVE EDIT)
+       ========================================= */
+    let isEditMode = false;
+    const editableElements = [
+      document.getElementById('textBadge'),
+      document.getElementById('textTitleSub'),
+      document.getElementById('textTitleOrg'),
+      document.getElementById('textTitleYear'),
+      document.getElementById('textIntro'),
+      document.getElementById('textDate'),
+      document.getElementById('textTime'),
+      document.getElementById('textVenue')
+    ];
+
+    editToggleBtn.addEventListener('click', () => {
+      isEditMode = !isEditMode;
+      document.body.classList.toggle('editable-mode-active', isEditMode);
+
+      editableElements.forEach(el => {
+        if (el) el.contentEditable = isEditMode ? "true" : "false";
+      });
+
+      if (isEditMode) {
+        editToggleBtn.classList.add('edit-active');
+        editBtnLabel.textContent = "Selesai Edit";
+        showAppModal(
+          "Mod Suntingan Diaktifkan",
+          "Anda kini boleh menekan dan menaip pada teks kad (Tajuk, Tarikh, Masa, Lokasi) untuk mengubah suai mengikut keperluan majlis anda.",
+          "info"
+        );
+      } else {
+        editToggleBtn.classList.remove('edit-active');
+        editBtnLabel.textContent = "Ubah Teks (Edit)";
+        showAppModal(
+          "Suntingan Disimpan",
+          "Kandungan kad jemputan telah dikemas kini dengan teks pilihan anda.",
+          "success"
+        );
+      }
+    });
+
+    /* =========================================
+       3. KELOLAAN BORANG RSVP & JADUAL
+       ========================================= */    
+function renderGuestTable() {
+
+  guestTableBody.innerHTML = '';
+
+  // Hanya paparkan dua status yang digunakan sekarang
+  const senaraiPaparan = guestState.filter((guest) =>
+    guest.status === 'Hadir (Seorang)' ||
+    guest.status === 'Tidak Dapat Hadir'
+  );
+
+  let jumlahHadir = 0;
+
+  if (senaraiPaparan.length === 0) {
+    guestTableBody.appendChild(emptyRowPlaceholder);
+    counterHadir.textContent = "0 orang";
+    return;
+  }
+
+  senaraiPaparan.forEach((guest) => {
+
+    const hadir = guest.status === 'Hadir (Seorang)';
+
+    const bilangan = hadir ? 1 : 0;
+
+    const badgeClass = hadir
+      ? 'status-hadir'
+      : 'status-maaf';
+
+    const statusPaparan = hadir
+      ? 'Hadir (Seorang Diri)'
+      : 'Tidak Hadir';
+
+    jumlahHadir += bilangan;
+
+    const tr = document.createElement('tr');
+
+    tr.innerHTML = `
+      <td>
+        <strong>${escapeHtml(guest.nama)}</strong>
+      </td>
+
+      <td>
+        <span class="badge-status ${badgeClass}">
+          ${escapeHtml(statusPaparan)}
+        </span>
+      </td>
+
+      <td>${bilangan} orang</td>
+
+      <td>${escapeHtml(guest.tarikhMasa || '-')}</td>
+    `;
+
+    guestTableBody.appendChild(tr);
+
+  });
+
+  counterHadir.textContent = `${jumlahHadir} orang`;
+
+}
+
+function escapeHtml(string) {
+  return String(string ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+    
+/* Pengendalian Penghantaran Borang - Firebase */
+
+rsvpForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById('namaTetamu').value.trim();
+  const emel = document.getElementById('emelTetamu').value.trim();
+  const tel = document.getElementById('telefonTetamu').value.trim();
+  const status = document.getElementById('statusKehadiran').value;
+  const diet = document.getElementById('alahanMakanan').value.trim();
+
+  if (
+    nama.length < 2 || nama.length > 120 ||
+    tel.length < 9 || tel.length > 20 ||
+    emel.length > 254 || diet.length > 180
+  ) {
+    showAppModal(
+      "Maklumat Tidak Lengkap",
+      "Sila semak nama, nombor telefon dan maklumat yang dimasukkan.",
+      "warning"
+    );
+    return;
+  }
+
+  const btn = document.getElementById('btnSubmit');
+  const asalBtn = btn.innerHTML;
+
+  btn.disabled = true;
+  btn.innerHTML = 'Sedang Menyimpan...';
+
+  try {
+    const { db, firestore } = await firebaseReady;
+
+    const rekodRef = firestore.doc(
+  firestore.collection(db, "rsvp")
+);
+
+const paparanRef = firestore.doc(
+  db,
+  "rsvp_paparan",
+  rekodRef.id
+);
+
+const batch = firestore.writeBatch(db);
+
+// Rekod lengkap - tertutup
+batch.set(rekodRef, {
+  nama: nama,
+  emel: emel,
+  tel: tel,
+  status: status,
+  diet: diet || "Tiada",
+  createdAt: firestore.serverTimestamp()
+});
+
+// Paparan awam - nama diringkaskan
+batch.set(paparanRef, {
+  namaPaparan: nama.charAt(0).toUpperCase() + "***",
+  status: status,
+  createdAt: firestore.serverTimestamp()
+});
+
+await batch.commit();
+    
+    successBanner.classList.add('show');
+
+    setTimeout(() => {
+      successBanner.classList.remove('show');
+    }, 5000);
+
+    rsvpForm.reset();
+
+    showAppModal(
+      "Pengesahan Berjaya!",
+      `Terima kasih, ${nama}. Pengesahan kehadiran anda telah berjaya disimpan dalam Firebase.`,
+      "success"
+    );
+
+  } catch (error) {
+    console.error("Ralat Firebase:", error);
+
+    showAppModal(
+      "Gagal Menyimpan",
+      "Rekod tidak berjaya disimpan. Sila cuba semula.",
+      "warning"
+    );
+
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = asalBtn;
+  }
+});
+
+    
+/* PAPARAN RSVP SECARA LANGSUNG */
+
+window.onload = async function() {
+
+  const sheetNotice =
+    document.querySelector('.sheet-notice-box');
+
+  if (sheetNotice) {
+    sheetNotice.style.display = 'none';
+  }
+
+  const googleField =
+    document.getElementById('googleScriptUrl');
+
+  if (googleField) {
+    const group = googleField.closest('.form-group');
+    if (group) group.style.display = 'none';
+  }
+
+  const listTitle =
+    document.querySelector('.attendee-header-flex h3');
+
+  if (listTitle) {
+    listTitle.textContent =
+      'Senarai Pengesahan Kehadiran Majlis';
+  }
+
+  const listDescription =
+    document.querySelector('.attendee-header-flex p');
+
+  if (listDescription) {
+    listDescription.textContent =
+      'Dikemas kini secara langsung melalui Firebase.';
+  }
+
+  const countLabel =
+    document.querySelector('.counter-text small');
+
+  if (countLabel) {
+    countLabel.textContent = 'Jumlah Hadir:';
+  }
+
+  counterHadir.textContent = 'Memuatkan...';
+
+  try {
+    const { db, firestore } = await firebaseReady;
+
+    const q = firestore.query(
+      firestore.collection(db, "rsvp_paparan"),
+      firestore.orderBy("createdAt", "desc")
+    );
+
+    firestore.onSnapshot(q, (snapshot) => {
+
+      const records = snapshot.docs.map((item) => {
+        const data = item.data();
+
+        const tarikh = data.createdAt
+          ? data.createdAt.toDate()
+          : null;
+
+        return {
+          nama: data.namaPaparan || 'Tetamu',
+          status: data.status,
+          tarikhMasa: tarikh
+            ? tarikh.toLocaleString('ms-MY', {
+                timeZone: 'Asia/Kuala_Lumpur'
+              })
+            : '-'
+        };
+      });
+
+      guestState.splice(
+        0,
+        guestState.length,
+        ...records
+      );
+
+      renderGuestTable();
+
+    }, (error) => {
+      console.error("Ralat paparan RSVP:", error);
+      counterHadir.textContent = '-';
+      guestTableBody.innerHTML =
+        '<tr><td colspan="4" class="empty-row-text">Gagal memuatkan senarai kehadiran.</td></tr>';
+    });
+
+ 
+  } catch (error) {
+    console.error("Firebase gagal dimulakan:", error);
+    counterHadir.textContent = '-';
+  }
+};
+</script>
+</body>
+</html>
+

@@ -126,14 +126,27 @@ body {
       color: #3b2800;
     }
 
-/* Lambang / Ikon Bangunan */
-    .crest-icon {
-      font-size: 2.2rem;
-      color: #94a3b8;
-      margin-bottom: 14px;
-      display: inline-block;
-      opacity: 0.85;
-    }
+/* =========================================
+   LOGO RASMI SJAM - RESPONSIF
+   TELEFON, TABLET DAN PC
+   ========================================= */
+
+.crest-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 14px;
+  opacity: 1;
+}
+
+.crest-logo {
+  display: block;
+  width: 110px;
+  max-width: 30vw;
+  height: auto;
+  object-fit: contain;
+}
 
 /* Lencana Jemputan Rasmi */
     .badge-jemputan {
@@ -1079,10 +1092,16 @@ select.form-control {
           </button>
                   </div>
 
-<!-- Ikon Mahkota / Lambang Bangunan -->
-        <div class="crest-icon">
-          <i class="fa-solid fa-hotel"></i>
-        </div>
+
+<!-- Logo Rasmi SJAM -->
+<div class="crest-icon">
+  <img
+    src="https://drive.google.com/thumbnail?id=1zSB87Iwg4Y4ExEJDEvKkBwclemv7XhJX&sz=w600"
+    alt="Logo Rasmi SJAM"
+    class="crest-logo"
+  >
+</div>
+
 
 <!-- Badge Jemputan Rasmi -->
         <div>
@@ -1826,4 +1845,6 @@ window.onload = async function() {
 </script>
 </body>
 </html>
+
+
 

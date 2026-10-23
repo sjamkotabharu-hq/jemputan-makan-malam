@@ -1166,17 +1166,8 @@ select.form-control {
           </div>
         </div>
 
-<!-- Butang Navigasi Cepat -->
-        <div class="hero-btn-group">
-          <a href="#rsvpArea" class="btn-gold">
-            <span>Sahkan Kehadiran (RSVP)</span>
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-          <a href="#tentatifArea" class="btn-navy">
-            <span>Lihat Tentatif Majlis</span>
-            <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        </div>
+
+<!-- Butang Navigasi Cepat telah dibuang -->
       </div>
     </section>
 
@@ -1321,6 +1312,29 @@ select.form-control {
     class="form-control"
     placeholder="Cth: Jabatan Kecemasan / Hospital Kota Bharu / Jururawat"
   >
+</div>
+
+<!-- Permohonan Sumbangan Ikhlas -->
+<div style="
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #c62828;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.8;
+  text-align: left;
+">
+
+  <p style="margin-bottom: 10px;">
+    * Dengan segala hormatnya, kami memohon sumbangan ikhlas daripada Tuan/Puan bagi membantu menjayakan majlis ini. Sumbangan minimum adalah RM10 dan ke atas. Segala sumbangan serta sokongan Tuan/Puan amat kami hargai. Terima kasih.
+  </p>
+
+  <p>
+    * Sumbangan boleh dibuat secara tunai di kaunter
+    pendaftaran. Terima kasih.
+  </p>
+
 </div>
 
 <!-- Pilihan Pautan Google Apps Script -->
@@ -1516,71 +1530,149 @@ const firebaseReady = Promise.all([
        1. PENGURUSAN MUZIK LATAR ELEGAN (Web Audio API)
        Mewujudkan melodi akustik / piano santai tanpa fail mp3 luar
        ========================================= */
-    let audioCtx = null;
-    let isPlayingMusic = false;
-    let musicInterval = null;
+    
+/* =========================================
+   MUZIK AUTOMATIK KAD JEMPUTAN SJAM
+   Main selepas interaksi pertama tetamu
+   ========================================= */
 
-    function createHarmonicChime(freq, startTime, duration = 2.2) {
-      if (!audioCtx) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
+const laguJemputan = new Audio('./muzik-latar.mp3');
 
-      // Nada lembut seperti glockenspiel / piano akustik
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, startTime);
+laguJemputan.loop = true;
+laguJemputan.preload = 'none';
+laguJemputan.volume = 0.5;
 
-      // Envelop bunyi
-      gain.gain.setValueAtTime(0, startTime);
-      gain.gain.linearRampToValueAtTime(0.08, startTime + 0.05);
-      gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+// Kemaskini butang muzik
+function kemasKiniButangMuzik() {
 
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
+  const sedangMain = !laguJemputan.paused;
 
-      osc.start(startTime);
-      osc.stop(startTime + duration);
+  musicBtnLabel.textContent = sedangMain
+    ? "Hentikan Muzik"
+    : "Mainkan Muzik";
+
+  musicToggleBtn.classList.toggle(
+    'edit-active',
+    sedangMain
+  );
+}
+
+laguJemputan.addEventListener(
+  'play',
+  kemasKiniButangMuzik
+);
+
+laguJemputan.addEventListener(
+  'pause',
+  kemasKiniButangMuzik
+);
+
+// Hentikan pengesan selepas muzik bermula
+function hentikanPengesanAutomatik() {
+
+  document.removeEventListener(
+    'click',
+    muzikKlikPertama,
+    true
+  );
+
+  document.removeEventListener(
+    'keydown',
+    muzikTaipPertama,
+    true
+  );
+}
+
+// Fungsi utama memainkan muzik
+async function mainkanMuzikJemputan() {
+
+  if (!laguJemputan.paused) {
+    return true;
+  }
+
+  try {
+
+    await laguJemputan.play();
+
+    hentikanPengesanAutomatik();
+
+    return true;
+
+  } catch (error) {
+
+    console.warn("Muzik belum dapat dimainkan:", error);
+
+    return false;
+  }
+}
+
+// Main apabila tetamu menyentuh halaman
+function muzikKlikPertama(event) {
+
+  // Butang muzik menggunakan fungsi sendiri
+  if (
+    event.target.closest &&
+    event.target.closest('#musicToggleBtn')
+  ) {
+    return;
+  }
+
+  mainkanMuzikJemputan();
+}
+
+// Main apabila tetamu mula menaip
+function muzikTaipPertama(event) {
+
+  if (
+    event.key === 'Tab' ||
+    event.ctrlKey ||
+    event.altKey ||
+    event.metaKey ||
+    event.target === musicToggleBtn
+  ) {
+    return;
+  }
+
+  mainkanMuzikJemputan();
+}
+
+// Aktifkan pengesan interaksi pertama
+document.addEventListener(
+  'click',
+  muzikKlikPertama,
+  true
+);
+
+document.addEventListener(
+  'keydown',
+  muzikTaipPertama,
+  true
+);
+
+// Butang manual Mainkan / Hentikan Muzik
+musicToggleBtn.addEventListener(
+  'click',
+  async function() {
+
+    if (!laguJemputan.paused) {
+
+      laguJemputan.pause();
+      return;
     }
 
-    function playMajesticMelody() {
-      if (!audioCtx) return;
-      const now = audioCtx.currentTime;
-      // Kunci nada lembut Pentatonik D Major yang menenangkan
-      const notes = [293.66, 329.63, 369.99, 440.00, 493.88, 587.33];
-      
-      notes.forEach((freq, idx) => {
-        createHarmonicChime(freq, now + (idx * 0.7), 2.5);
-      });
+    const berjaya = await mainkanMuzikJemputan();
+
+    if (!berjaya) {
+
+      showAppModal(
+        "Muzik Tidak Dapat Dimainkan",
+        "Sila semak fail muzik-latar.mp3 dalam GitHub.",
+        "warning"
+      );
+
     }
-
-    function toggleBackgroundMusic() {
-      if (!audioCtx) {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioContext();
-      }
-
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      if (!isPlayingMusic) {
-        isPlayingMusic = true;
-        musicBtnLabel.textContent = "Hentikan Muzik";
-        musicToggleBtn.classList.add('edit-active');
-        playMajesticMelody();
-        // Ulangi ritma melodi lembut setiap 5 saat
-        musicInterval = setInterval(() => {
-          if (isPlayingMusic) playMajesticMelody();
-        }, 5200);
-      } else {
-        isPlayingMusic = false;
-        clearInterval(musicInterval);
-        musicBtnLabel.textContent = "Mainkan Muzik";
-        musicToggleBtn.classList.remove('edit-active');
-      }
-    }
-
-    musicToggleBtn.addEventListener('click', toggleBackgroundMusic);
-
+  }
+);
     
     /* =========================================
        3. KELOLAAN BORANG RSVP & JADUAL

@@ -1150,7 +1150,7 @@ select.form-control {
             </div>
             <div>
               <div class="info-label">Masa</div>
-              <div class="info-val" id="textTime">8:00 Malam</div>
+              <div class="info-val" id="textTime">7:30 Malam</div>
             </div>
           </div>
 
@@ -1163,7 +1163,7 @@ select.form-control {
   <div>
     <div class="info-label">Tempat</div>
     <div class="info-val" id="textVenue">
-      Grand Ballroom,<br>Hotel Perdana Kota Bharu
+      Dewan Kijang 1,<br>Hotel Perdana Kota Bharu
     </div>
   </div>
 </div>
@@ -1181,7 +1181,8 @@ select.form-control {
   <div>
     <div class="info-label">Kod Pakaian</div>
     <div class="info-val">
-      Berpakaian Batik
+      Baju Koprat - Pegawai dan Ahli SJAM 
+Berpakaian Batik- Tetamu Jemputan
     </div>
   </div>
 </div>
@@ -1218,7 +1219,7 @@ select.form-control {
   <div class="step-icon-bubble">
     <i class="fa-regular fa-user"></i>
   </div>
-  <div class="step-time">07:00 PM</div>
+  <div class="step-time">08:15 PM</div>
   <div class="step-name">Ketibaan</div>
   <div class="step-desc-primary">
     Ketibaan Tetamu &amp; Dif-Dif Kehormat
@@ -1228,17 +1229,20 @@ select.form-control {
   </div>
 </div>
 
+
 <!-- Langkah 2 -->
 <div class="step-item">
   <div class="step-icon-bubble">
     <i class="fa-solid fa-microphone-lines"></i>
   </div>
-  <div class="step-time">08:00 PM</div>
-  <div class="step-name">Perasmian</div>
+
+  <div class="step-time">08:20 PM</div>
+
   <div class="step-desc-primary">
-    Ketibaan Tetamu Utama, diikuti Nyanyian Lagu Negaraku,
+    Nyanyian Lagu Negaraku,
     Lagu Selamat Sultan dan Lagu Rasmi SJAM
   </div>
+
   <div class="step-desc-secondary">
     Bacaan doa pembuka majlis.
   </div>
@@ -1249,11 +1253,17 @@ select.form-control {
   <div class="step-icon-bubble">
     <i class="fa-solid fa-bell-concierge"></i>
   </div>
-  <div class="step-time">08:45 PM</div>
-  <div class="step-name">Jamuan</div>
+
+  <div class="step-time">08:30 PM</div>
+
+  <div class="step-name">
+    Jamuan dan Ucapan Perasmian
+  </div>
+
   <div class="step-desc-primary">
     Jamuan Makan Malam &amp; Persembahan Multimedia
   </div>
+
   <div class="step-desc-secondary">
     Nikmati hidangan istimewa sambil dihiburkan muzik latar.
   </div>
@@ -1298,11 +1308,17 @@ select.form-control {
       <div class="rsvp-card-box">
 
 <div class="rsvp-header-flex">
-          <div class="rsvp-title-group">
-            <h2>Pengesahan Kehadiran</h2>
-            <p>Sila lengkapkan maklumat berikut
-    bagi tujuan pengesahan kehadiran majlis.</p>
-          </div>
+          
+<div class="rsvp-title-group">
+
+  <h2>Borang Pengesahan Kehadiran</h2>
+
+  <p>
+    Sila lengkapkan maklumat berikut
+    bagi tujuan pengesahan kehadiran majlis.
+  </p>
+
+</div>
 
 <!-- Notis Sambungan Google Sheet -->
           <div class="sheet-notice-box">
@@ -1342,10 +1358,22 @@ select.form-control {
 <div class="form-group">
   <label for="statusKehadiran">Status Kehadiran *</label>
   <select id="statusKehadiran" class="form-control" required>
-    <option value="" disabled selected>-- Pilih Status Kehadiran --</option>
-    <option value="Hadir (Seorang)">Hadir (Seorang Diri)</option>
-    <option value="Tidak Dapat Hadir">Tidak Hadir</option>
-  </select>
+  <option value="" disabled selected>
+    -- Pilih Status Kehadiran --
+  </option>
+
+  <option value="Hadir (Seorang)">
+    Hadir (Seorang Diri)
+  </option>
+
+  <option value="Hadir (Bersama Pasangan)">
+    Hadir (Berpasangan)
+  </option>
+
+  <option value="Tidak Dapat Hadir">
+    Tidak Hadir
+  </option>
+</select>
 </div>
 
 <!-- Jabatan / Hospital / Jawatan -->
@@ -1578,12 +1606,15 @@ const firebaseReady = Promise.all([
    Main selepas interaksi pertama tetamu
    ========================================= */
 
-const laguJemputan = new Audio('./muzik-latar.mp3');
+/* MUZIK LATAR SJAM - INTERACTIVELINK */
+
+const laguJemputan = new Audio(
+  'https://sjamkotabharu-hq.github.io/jemputan-makan-malam/muzik-latar.mp3'
+);
 
 laguJemputan.loop = true;
 laguJemputan.preload = 'none';
 laguJemputan.volume = 0.5;
-
 // Kemaskini butang muzik
 function kemasKiniButangMuzik() {
 
@@ -1725,10 +1756,10 @@ function renderGuestTable() {
 
   // Hanya paparkan dua status yang digunakan sekarang
   const senaraiPaparan = guestState.filter((guest) =>
-    guest.status === 'Hadir (Seorang)' ||
-    guest.status === 'Tidak Dapat Hadir'
-  );
-
+  guest.status === 'Hadir (Seorang)' ||
+  guest.status === 'Hadir (Bersama Pasangan)' ||
+  guest.status === 'Tidak Dapat Hadir'
+);
   let jumlahHadir = 0;
 
   if (senaraiPaparan.length === 0) {
@@ -1739,17 +1770,25 @@ function renderGuestTable() {
 
   senaraiPaparan.forEach((guest) => {
 
-    const hadir = guest.status === 'Hadir (Seorang)';
+    const pasangan =
+  guest.status === 'Hadir (Bersama Pasangan)';
 
-    const bilangan = hadir ? 1 : 0;
+const seorang =
+  guest.status === 'Hadir (Seorang)';
 
-    const badgeClass = hadir
-      ? 'status-hadir'
-      : 'status-maaf';
+const bilangan = pasangan ? 2 : seorang ? 1 : 0;
 
-    const statusPaparan = hadir
-      ? 'Hadir (Seorang Diri)'
-      : 'Tidak Hadir';
+const badgeClass = pasangan
+  ? 'status-pasangan'
+  : seorang
+    ? 'status-hadir'
+    : 'status-maaf';
+
+const statusPaparan = pasangan
+  ? 'Hadir (Berpasangan)'
+  : seorang
+    ? 'Hadir (Seorang Diri)'
+    : 'Tidak Hadir';
 
     jumlahHadir += bilangan;
 
@@ -1979,5 +2018,4 @@ window.onload = async function() {
 </script>
 </body>
 </html>
-
 

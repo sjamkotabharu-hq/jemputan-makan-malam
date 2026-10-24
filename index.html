@@ -1751,9 +1751,8 @@ function renderGuestTable() {
   guestTableBody.innerHTML = '';
 
   // Hanya paparkan dua status yang digunakan sekarang
-  const senaraiPaparan = guestState.filter((guest) =>
+const senaraiPaparan = guestState.filter((guest) =>
   guest.status === 'Hadir (Seorang)' ||
-  guest.status === 'Hadir (Bersama Pasangan)' ||
   guest.status === 'Tidak Dapat Hadir'
 );
   let jumlahHadir = 0;

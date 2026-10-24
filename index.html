@@ -1359,21 +1359,26 @@ Berpakaian Batik- Tetamu Jemputan
   <label for="statusKehadiran">Status Kehadiran *</label>
   <select id="statusKehadiran" class="form-control" required>
   <option value="" disabled selected>
-    -- Pilih Status Kehadiran --
-  </option>
+    
+<!-- Status Kehadiran -->
+<div class="form-group">
+  <label for="statusKehadiran">Status Kehadiran *</label>
 
-  <option value="Hadir (Seorang)">
-    Hadir (Seorang Diri)
-  </option>
+  <select id="statusKehadiran" class="form-control" required>
 
-  <option value="Hadir (Bersama Pasangan)">
-    Hadir (Berpasangan)
-  </option>
+    <option value="" disabled selected>
+      -- Pilih Status Kehadiran --
+    </option>
 
-  <option value="Tidak Dapat Hadir">
-    Tidak Hadir
-  </option>
-</select>
+    <option value="Hadir (Seorang)">
+      Hadir (Seorang Diri)
+    </option>
+
+    <option value="Tidak Dapat Hadir">
+      Tidak Hadir
+    </option>
+
+  </select>
 </div>
 
 <!-- Jabatan / Hospital / Jawatan -->
@@ -2018,4 +2023,5 @@ window.onload = async function() {
 </script>
 </body>
 </html>
+
 

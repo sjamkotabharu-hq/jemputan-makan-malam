@@ -1354,34 +1354,22 @@ Berpakaian Batik- Tetamu Jemputan
               <input type="tel" id="telefonTetamu" class="form-control" placeholder="012-3456789" required>
             </div>
 
-
 <!-- Status Kehadiran -->
 <div class="form-group">
+  <label for="statusKehadiran">Status Kehadiran *</label>
+  <select id="statusKehadiran" class="form-control" required>
+  <option value="" disabled selected>
+    -- Pilih Status Kehadiran --
+  </option>
 
-  <label for="statusKehadiran">
-    Status Kehadiran *
-  </label>
+  <option value="Hadir (Seorang)">
+    Hadir (Seorang Diri)
+  </option>
 
-  <select
-    id="statusKehadiran"
-    class="form-control"
-    required
-  >
-
-    <option value="" disabled selected>
-      -- Pilih Status Kehadiran --
-    </option>
-
-    <option value="Hadir (Seorang)">
-      Hadir (Seorang Diri)
-    </option>
-
-    <option value="Tidak Dapat Hadir">
-      Tidak Hadir
-    </option>
-
-  </select>
-
+  <option value="Tidak Dapat Hadir">
+    Tidak Hadir
+  </option>
+</select>
 </div>
 
 <!-- Jabatan / Hospital / Jawatan -->
@@ -2026,3 +2014,8 @@ window.onload = async function() {
 </script>
 </body>
 </html>
+
+
+
+
+

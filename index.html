@@ -1072,6 +1072,46 @@ select.form-control {
   }
 }
 
+
+/* =========================================
+   BANNER MAJLIS MAKAN MALAM AMAL SJAM
+   RESPONSIF TELEFON, TABLET DAN PC
+   ========================================= */
+
+.banner-majlis {
+  width: 100%;
+  max-width: 900px;
+  margin: 18px auto 28px auto;
+  text-align: center;
+}
+
+.banner-majlis-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 163, 75, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Paparan telefon */
+@media (max-width: 520px) {
+
+  .banner-majlis {
+    width: 100%;
+    margin: 12px auto 20px auto;
+  }
+
+  .banner-majlis-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+}
+
+
 </style>
 </head>
 <body>
@@ -1093,30 +1133,23 @@ select.form-control {
                   </div>
 
 
-<!-- Logo Rasmi SJAM -->
-<div class="crest-icon">
+
+<!-- =========================================
+     BANNER RASMI MAJLIS MAKAN MALAM AMAL
+     SJAM KAWASAN KELANTAN UTARA 2026
+     ========================================= -->
+
+<div class="banner-majlis">
+
   <img
-    src="https://drive.google.com/thumbnail?id=1zSB87Iwg4Y4ExEJDEvKkBwclemv7XhJX&sz=w600"
-    alt="Logo Rasmi SJAM"
-    class="crest-logo"
+    src="https://drive.google.com/thumbnail?id=1ItftjfY6eNfKjh3PHDLhYMe-EHnyq2GH&amp;sz=w1600"
+    alt="Banner Rasmi Majlis Makan Malam Amal SJAM Kota Bharu 2026"
+    class="banner-majlis-img"
+    loading="eager"
   >
+
 </div>
 
-
-<!-- Badge Jemputan Rasmi -->
-        <div>
-          <div class="badge-jemputan" id="textBadge">Jemputan Rasmi</div>
-        </div>
-
-<!-- Tajuk Utama -->
-        <h1 class="main-title-sub" id="textTitleSub">MAJLIS MAKAN MALAM AMAL</h1>
-
-<h2 class="main-title-org" id="textTitleOrg">
-  SJAM KAWASAN KELANTAN UTARA
-  <span style="white-space: nowrap;">KOTA BHARU</span>
-</h2>
-
-<div class="main-title-year" id="textTitleYear">2026</div>
 
 <!-- Teks Aluan -->
         <p class="invitation-intro" id="textIntro">

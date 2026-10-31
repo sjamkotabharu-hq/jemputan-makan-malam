@@ -1896,10 +1896,10 @@ await batch.commit();
     rsvpForm.reset();
 
     showAppModal(
-      "Pengesahan Berjaya!",
-      `Terima kasih, ${nama}. Pengesahan kehadiran anda telah berjaya disimpan dalam Firebase.`,
-      "success"
-    );
+  "Pengesahan Berjaya!",
+  `Terima kasih, ${nama}. Maklumat pengesahan kehadiran anda telah berjaya disimpan. Kami amat menghargai maklum balas dan sokongan anda.`,
+  "success"
+);
 
   } catch (error) {
     console.error("Ralat Firebase:", error);
@@ -1949,7 +1949,7 @@ window.onload = async function() {
 
   if (listDescription) {
     listDescription.textContent =
-      'Dikemas kini secara langsung melalui Firebase.';
+  'Senarai kehadiran tetamu dikemas kini secara langsung.';
   }
 
   const countLabel =
